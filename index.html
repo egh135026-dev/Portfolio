@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enidu Gardiya - Engineering Portfolio</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+    }
+    
+    .section-fade {
+      animation: fadeIn 0.6s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="bg-gray-900 text-gray-100 min-h-full">
+  <div id="top" class="min-h-full"><!-- Navigation Bar -->
+   <nav class="bg-gray-800/95 backdrop-blur-sm border-b border-gray-700 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="flex justify-between items-center py-4"><a href="#top" class="text-xl font-bold gradient-text hover:opacity-80 transition-opacity cursor-pointer">EG</a>
+      <div class="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2"><a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">About Me</a> <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">Projects</a> <a href="#experience" class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">Experience</a>
+      </div><!-- Mobile menu button --> <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-blue-400">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div><!-- Mobile menu -->
+     <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col space-y-2 text-center"><a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer py-2">About Me</a> <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer py-2">Projects</a> <a href="#experience" class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer py-2">Experience</a>
+      </div>
+     </div>
+    </div>
+   </nav><!-- Header Section -->
+   <header id="contact" class="bg-gradient-to-r from-gray-800 to-gray-900 border-b border-gray-700">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+     <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="flex-1 text-center md:text-left">
+       <h1 id="name" class="text-5xl font-bold gradient-text mb-3">Enidu Gardiya</h1>
+       <p id="tagline" class="text-xl text-gray-300 mb-4">Mechanical Engineering Student</p>
+       <div class="flex flex-col gap-2 text-gray-400">
+        <div class="bg-gray-800 rounded-xl px-3 py-2 border border-gray-700 flex items-center gap-2 justify-center md:justify-start w-fit mx-auto md:mx-0">
+         <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+         </svg><a href="https://linkedin.com/in/enidugardiya" target="_blank" rel="noopener noreferrer" id="linkedin" class="hover:text-blue-400 transition-colors">linkedin.com/in/enidugardiya</a>
+        </div>
+        <div class="bg-gray-800 rounded-xl px-3 py-2 border border-gray-700 flex items-center gap-2 justify-center md:justify-start w-fit mx-auto md:mx-0">
+         <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+         </svg><a href="mailto:egardiya@uwaterloo.ca" id="email" class="hover:text-blue-400 transition-colors">egardiya@uwaterloo.ca</a>
+        </div>
+        <div class="bg-gray-800 rounded-xl px-3 py-2 border border-gray-700 flex items-center gap-2 justify-center md:justify-start w-fit mx-auto md:mx-0">
+         <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+         </svg><a href="tel:+17782397790" id="phone" class="hover:text-blue-400 transition-colors">778-239-7790</a>
+        </div>
+       </div>
+      </div>
+     <div class="flex-1 flex justify-center md:justify-end">
+  <div class="w-64 h-64 md:w-80 md:h-80 bg-gray-700/30 border-2 border-gray-500 rounded-lg overflow-hidden">
+    <img src="./images/profile.jpg" alt="Enidu Gardiya" class="w-full h-full object-cover">
+  </div>
+</div>
+     </div>
+    </div>
+   </header>
+   <main class="max-w-6xl mx-auto px-6 py-12"><!-- Introduction Section -->
+    <section class="mb-16 section-fade">
+     <div class="bg-gradient-to-r from-blue-900/30 to-gray-800/30 rounded-lg p-8 border border-blue-500/20">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+       <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
+       </svg> Welcome</h2>
+      <p class="text-lg text-gray-300 leading-relaxed">Hey there! My name is Enidu Gardiya, and I am currently a first-year Mechanical Engineering Student at the University of Waterloo. Welcome to my Portfolio! Here is a collection of all my personal projects, experiences, and what I have learned thus far as an aspiring engineer. Hope you enjoy it, and I'd love to connect!</p>
+     </div>
+    </section><!-- About Me Section -->
+    <section id="about" class="mb-16 section-fade">
+     <h2 class="text-3xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+      <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+      </svg> About Me</h2>
+     <div class="bg-gray-800 rounded-lg p-8 border border-gray-700 card-hover">
+      <div class="grid md:grid-cols-2 gap-8">
+       <div>
+        <h3 class="text-xl font-semibold text-blue-300 mb-4">Background &amp; Interests</h3>
+        <p class="text-gray-300 mb-4 leading-relaxed">I was born and raised in British Columbia, Canada. As a result of this, I am an extremely passionate hiker, and am always looking for my next hike. I am also an avid gym go-er and runner. I even competed in track and field at the provincial level during high school.</p>
+        <p class="text-gray-300 mb-4 leading-relaxed">My greatest accomplishment as a track athlete was competing at the 2022 BC Summer Games where I achieved a silver medal in both the 300m and 800m distances.</p>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-sm border border-blue-500/30">🏃‍♂️ Track &amp; Field</span> <span class="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-sm border border-blue-500/30">🥈 BC Summer Games</span> <span class="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-sm border border-blue-500/30">🥾 Hiking</span> <span class="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-sm border border-blue-500/30">💪 Fitness</span>
+        </div>
+       </div>
+       <div>
+        <h3 class="text-xl font-semibold text-blue-300 mb-4">Engineering Journey</h3>
+        <p class="text-gray-300 mb-4 leading-relaxed">My father is who initially inspired me to one day become an engineer. In my childhood, I can recall countless hours helping my father as he fixed issues with our family car. This fascination was instilled in me from hours spent with my father, assisting him as he worked on our family car's engine. His love for mechanics inspired me to pursue a similar path.</p>
+        <p class="text-gray-300 mb-4 leading-relaxed">Over time, I developed the aspiration of pursuing Aerospace. Staring up at planes flying by during my workouts on the track fueled my rooted passion for mechanics, developing this aspiration. I envision becoming a mechanical engineer, specializing in Aerospace. To me it's not just a goal, but a lifelong dream.</p>
+        <div class="bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-4 rounded-lg border border-blue-500/20">
+         <p class="text-blue-200 font-medium">🚀 Dream: Aerospace Engineering Specialization</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Education Section -->
+    <section class="mb-16 section-fade">
+     <h2 class="text-3xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+      <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+      </svg> Education</h2>
+     <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+      <div class="flex justify-between items-start mb-3">
+       <h3 class="text-xl font-semibold text-white">University of Waterloo</h3><span class="text-gray-400">Expected: Apr 2030</span>
+      </div>
+      <p class="text-gray-300">Bachelor of Applied Science in Mechanical Engineering</p>
+     </div>
+    </section><!-- Technical Skills Section -->
+    <section class="mb-16 section-fade">
+     <h2 class="text-3xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+      <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+      </svg> Technical Skills</h2>
+     <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <h3 class="text-lg font-semibold text-blue-300 mb-4">Software</h3>
+       <div class="flex flex-wrap gap-2"><span class="bg-gray-700 px-3 py-1 rounded-full text-sm">SolidWorks</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AutoCAD</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">HTML</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Microsoft Office</span>
+       </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <h3 class="text-lg font-semibold text-blue-300 mb-4">Workplace</h3>
+       <div class="flex flex-wrap gap-2"><span class="bg-gray-700 px-3 py-1 rounded-full text-sm">WHMIS Certificate</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Machine Shop Certificate</span>
+       </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <h3 class="text-lg font-semibold text-blue-300 mb-4">Practical</h3>
+       <div class="flex flex-wrap gap-2"><span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Combustion Engines</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Engineering Drawings</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Prototyping</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Materials Handling</span>
+       </div>
+      </div>
+     </div>
+    </section><!-- Technical Projects Section -->
+    <section id="projects" class="mb-16 section-fade">
+     <h2 class="text-3xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+      <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg> Technical Projects</h2>
+      <div class="space-y-6">
+   
+      <!-- Project 2 -->
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <div class="flex justify-between items-start mb-4">
+        <h3 class="text-xl font-semibold text-white">70cc Dirtbike Restoration</h3><span class="text-gray-400">Jul 2025 - Aug 2025</span>
+       </div><!-- Media Gallery -->
+       <!-- Media Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+  <div class="rounded-lg aspect-video overflow-hidden">
+    <img src="./images/dirtbike1.jpg" alt="Dirtbike before restoration" class="w-full h-full object-cover">
+  </div>
+  <div class="rounded-lg aspect-video overflow-hidden">
+    <img src="./images/dirtbike2.jpg" alt="Dirtbike during restoration process" class="w-full h-full object-cover">
+  </div>
+  <div class="rounded-lg aspect-video overflow-hidden">
+    <img src="./images/dirtbike3.jpg" alt="Dirtbike after restoration" class="w-full h-full object-cover">
+  </div>
+</div>
+       <div class="flex flex-wrap gap-2"><span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Mechanical Restoration</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Drivetrain Assembly</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Brake Installation</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Wheel Assembly</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Spoke Installation</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Tube Seating</span>
+       </div>
+      </div><!-- Project 3 -->
+    <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <div class="flex justify-between items-start mb-4">
+        <h3 class="text-xl font-semibold text-white">2005 Toyota Echo Power-Steering and Alternator Belt Replacement</h3><span class="text-gray-400">Apr 2025 - Jul 2025</span>
+       </div><!-- Media Gallery -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+  <div class="rounded-lg aspect-video overflow-hidden">
+    <img src="./images/car1.jpg" alt="Worn alternator belt before replacement" class="w-full h-full object-cover">
+  </div>
+  <div class="rounded-lg aspect-video overflow-hidden">
+    <img src="./images/car2.jpg" alt="Installing new alternator belt" class="w-full h-full object-cover">
+  </div>
+  <div class="rounded-lg aspect-video overflow-hidden">
+    <img src="./images/car3.jpg" alt="Completed alternator belt replacement" class="w-full h-full object-cover">
+  </div>
+</div>
+       
+       <div class="flex flex-wrap gap-2"><span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Belt Replacement</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Hydraulic Jack Operation</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Power Steering System</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Alternator Service</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Tension Release</span> <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Engine Bay Access</span>
+       </div>
+ 
+
+      </div>
+     </div>
+    </section><!-- Experience Section -->
+    <section id="experience" class="mb-16 section-fade">
+     <h2 class="text-3xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+      <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" /> <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+      </svg> Experience</h2>
+     <div class="space-y-6"><!-- Experience 1 -->
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <div class="flex justify-between items-start mb-3">
+        <div>
+         <h3 class="text-xl font-semibold text-white">North Delta Secondary Student Council</h3>
+         <p class="text-gray-400">Vice-President</p>
+        </div><span class="text-gray-400">Oct 2024 - Jun 2025</span>
+       </div>
+       <ul class="space-y-2 text-gray-300">
+        <li class="flex gap-2"><span class="text-blue-400 mt-1">•</span> <span>Actively led 30 peers in 10 school-wide spirit events, consisting of over 1200 students, in order to provide a more welcoming educational environment</span></li>
+        <li class="flex gap-2"><span class="text-blue-400 mt-1">•</span> <span>Oversaw 2 school-wide and 1 community-wide fundraiser to provide non-perishable food items for the Delta Assist food bank</span></li>
+       </ul>
+      </div><!-- Experience 2 -->
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <div class="flex justify-between items-start mb-3">
+        <div>
+         <h3 class="text-xl font-semibold text-white">Speeders Inc.</h3>
+         <p class="text-gray-400">Attractions Host</p>
+        </div><span class="text-gray-400">Oct 2024 - May 2025</span>
+       </div>
+       <ul class="space-y-2 text-gray-300">
+        <li class="flex gap-2"><span class="text-blue-400 mt-1">•</span> <span>Directly communicated and guided over 100 customers on a weekly basis through entertainment experiences such as go-karting, laser-tag, and mini-golf</span></li>
+       </ul>
+      </div><!-- Experience 3 -->
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <div class="flex justify-between items-start mb-3">
+        <div>
+         <h3 class="text-xl font-semibold text-white">Universal Athletics Club</h3>
+         <p class="text-gray-400">Assistant Coach</p>
+        </div><span class="text-gray-400">2022 - 2025</span>
+       </div>
+       <ul class="space-y-2 text-gray-300">
+        <li class="flex gap-2"><span class="text-blue-400 mt-1">•</span> <span>Managing and coaching Junior Development Practices (Children ages from 5-10)</span></li>
+       </ul>
+      </div><!-- Experience 4 -->
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <div class="flex justify-between items-start mb-3">
+        <div>
+         <h3 class="text-xl font-semibold text-white">Brandon Bassi Foundation</h3>
+         <p class="text-gray-400">Team Building Coordinator</p>
+        </div><span class="text-gray-400">2023 - 2025</span>
+       </div>
+       <ul class="space-y-2 text-gray-300">
+        <li class="flex gap-2"><span class="text-blue-400 mt-1">•</span> <span>Assisted in managing team building activities for youth entering into high school</span></li>
+        <li class="flex gap-2"><span class="text-blue-400 mt-1">•</span> <span>Took initiative in leading several groups of youth through team activities to boost morale and encourage confidence into youth entering high school in the up-coming year</span></li>
+       </ul>
+      </div><!-- Experience 5 -->
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 card-hover">
+       <div class="flex justify-between items-start mb-3">
+        <div>
+         <h3 class="text-xl font-semibold text-white">Buddhist Vihara Society in BC</h3>
+         <p class="text-gray-400">Assistant &amp; Substitute Religious Teacher</p>
+        </div><span class="text-gray-400">2022 - 2025</span>
+       </div>
+       <ul class="space-y-2 text-gray-300">
+        <li class="flex gap-2"><span class="text-blue-400 mt-1">•</span> <span>Assistant and substitute religious teacher for students of Buddhist Vihara Society (Children ages 5-13)</span></li>
+        <li class="flex gap-2"><span class="text-blue-400 mt-1">•</span> <span>Actively contributed to assisting children with the development of their sense of identity, further encouraging them to leave a positive impact in their future life endeavors</span></li>
+       </ul>
+      </div>
+     </div>
+    </section>
+   </main><!-- Footer -->
+   <footer class="bg-gray-800 border-t border-gray-700 py-8">
+    <div class="max-w-6xl mx-auto px-6 text-center text-gray-400">
+     <p>© 2025 Enidu Gardiya. All rights reserved.</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      name: "Enidu Gardiya",
+      tagline: "Mechanical Engineering Student",
+      email: "egardiya@uwaterloo.ca",
+      phone: "778-239-7790",
+      linkedin: "linkedin.com/in/enidugardiya",
+      background_color: "#111827",
+      surface_color: "#1f2937",
+      text_color: "#f3f4f6",
+      primary_action_color: "#3b82f6",
+      secondary_action_color: "#60a5fa"
+    };
+
+    async function onConfigChange(config) {
+      document.getElementById('name').textContent = config.name || defaultConfig.name;
+      document.getElementById('tagline').textContent = config.tagline || defaultConfig.tagline;
+      document.getElementById('email').textContent = config.email || defaultConfig.email;
+      document.getElementById('phone').textContent = config.phone || defaultConfig.phone;
+      document.getElementById('linkedin').textContent = config.linkedin || defaultConfig.linkedin;
+
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      document.body.style.backgroundColor = backgroundColor;
+      document.body.style.color = textColor;
+
+      const cards = document.querySelectorAll('.bg-gray-800');
+      cards.forEach(card => {
+        card.style.backgroundColor = surfaceColor;
+      });
+
+      const headings = document.querySelectorAll('h2');
+      headings.forEach(heading => {
+        heading.style.color = primaryColor;
+      });
+
+      const bullets = document.querySelectorAll('.text-blue-400');
+      bullets.forEach(bullet => {
+        bullet.style.color = secondaryColor;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["name", config.name || defaultConfig.name],
+        ["tagline", config.tagline || defaultConfig.tagline],
+        ["email", config.email || defaultConfig.email],
+        ["phone", config.phone || defaultConfig.phone],
+        ["linkedin", config.linkedin || defaultConfig.linkedin]
+      ]);
+    }
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const navHeight = document.querySelector('nav').offsetHeight;
+          const targetPosition = target.offsetTop - navHeight - 20;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'997e8249b616543d',t:'MTc2MjAzMjc5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
